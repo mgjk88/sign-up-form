@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    appearance: none;
+}
+
+:root{
+    --main-pg-padding-left: 24px;
+    --sidebar-txt-color: white;
+    --form-font-sz: 10px
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#sidebar, #main-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar{
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 2;
+}
+
+#sidebar #banner{
+    font-size: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px;
+    margin: 15vh 0px 0px 0px;
+}
+
+#sidebar #logo-name{
+    font-family: 'norsebold';
+    color: var(--sidebar-txt-color, white);
+}
+
+#sidebar #logo{
+    width: 2em;
+}
+
+#sidebar #img-credit{
+    margin: auto 0px 0px 0px;
+    text-align: center;
+    color: var(--sidebar-txt-color, white);
+    font-size: 10px;
+}
+
+#main-page{
+    flex: 5;
+    justify-content: center;
+    background-color: #f9fafb;
+}
+
+#main-page #intro-txtbx{
+    width: 52ch;
+    padding-left: var(--main-pg-padding-left, 0);
+}
+
+.intro-txt, #encourage-txt{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#main-page form{
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px #777777;
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px var(--main-pg-padding-left, 0);
+}
+
+#main-page form fieldset{
+    display: flex;
+    gap: 56px;
+}
+
+#main-page form label{
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+#main-page form .input-container{
+    font-size: var(--form-font-sz, 16px);
+    display: flex;
+    flex-direction: column;
+}
+
+#main-page form input{
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+}
+
+#main-page form input:focus {
+    border-color: blue;
+    box-shadow: 0px 0px 2px blue;
+    outline: none;
+}
+
+#main-page form input[type="text"]:invalid {
+    border-color: red;
+    box-shadow: 0px 0px 2px red;
+}
+
+#main-page form #name-input input:invalid + span::after{
+    content: "*name must contain only letters";
+    color: red;
+}
+
+#main-page form input:invalid#email + span::after{
+    content: "*format: aBc@xYz.com";
+    color:red;
+}
+
+#main-page form input:invalid#hp-num+ span::after{
+    content: "*phone number must contain only numbers";
+    color:red;
+}
+
+#main-page form input[type="password"]:user-invalid{
+    border-color: red;
+    box-shadow: 0px 0px 2px red;
+}
+
+#main-page form input[type="password"]:user-invalid+ span::after{
+    content: "*password required";
+    color:red
+}
+
+#main-page button{
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #596D48;
+    padding: 10px 32px;
+    border-radius: 6px;
+    margin: 32px var(--main-pg-padding-left, 0);
+    font-weight: 700;
+}
+
+#main-page #redirect-txt{
+    font-size: 14px;
+    margin-left: var(--main-pg-padding-left,0);
+}
+
+#main-page #redirect-txt a{
+    color:#596D48;
+    font-weight: 700;
+    text-decoration: none;
+}

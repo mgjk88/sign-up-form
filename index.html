@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up!</title>
+    <script href="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div id="banner">
+            <img src="img/odin-lined-log.png" alt="logo" id="logo">
+            <h1 id="logo-name">ODIN</h1>
+        </div>
+
+        <p id="img-credit">Photo by Halie West on Unsplash</p>
+    </div>
+    <div id="main-page">
+
+        <div id="intro-txtbx">
+            <p class="intro-txt">
+                This is not a real service! You know you need something 
+                like this in your life to help you realize your deepest dreams.
+            </p>
+            <p class="intro-txt">
+                Sign up <em>now</em> to get started.
+            </p>
+            <br>
+            <p class="intro-txt">
+                You <em>know</em> you want to.
+            </p>
+        </div>
+
+        <form action="" method="post" id="sign-up-form">
+            <p id="encourage-txt">
+                Let's do this!
+            </p>
+
+            <fieldset id="name-input">
+                <div class="input-container">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" pattern="[a-zA-Z]*">
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="last-name" pattern="[a-zA-Z]*">    
+                    <span></span>
+                </div>
+            </fieldset>
+
+            <fieldset id="contact-input">
+                <div class="input-container">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" pattern="[a-zA-Z0-9]*@[a-zA-Z]*\.com">
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <label for="hp-num">PHONE NUMBER</label>
+                    <input type="text" id="hp-num" name="hp-num" pattern="[0-9]*">                        
+                    <span></span>
+                </div>
+            </fieldset>
+
+            <fieldset id="pass-input">
+                <div class="input-container">
+                    <label for="pass">PASSWORD</label>
+                    <input type="password" id="pass" name="pass" required>
+                    <span></span>    
+                </div>
+                <div class="input-container">
+                    <label for="verify-pass">CONFIRM PASSWORD</label>
+                    <input type="password" id="verify-pass" required>
+                    <span></span>    
+                </div>
+            </fieldset>
+        </form>
+        <div id="button-box">
+            <button type="submit">Create Account</button>
+        </div>
+        <p id="redirect-txt">
+            Already have an account? <a href="" id="login-link">Log in</a>
+        </p>
+    </div>
+</body>
+</html>
